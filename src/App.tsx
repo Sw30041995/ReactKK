@@ -9,9 +9,9 @@ function App() {
     return (
         <div>
             <AppTitle/>
-            <Rating/>
+            <Rating value={3}/>
             <Accordion/>
-            <Rating/>
+            <Rating value={5}/>
             <Accordion/>
         </div>
     );
