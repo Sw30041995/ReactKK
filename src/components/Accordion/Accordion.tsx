@@ -2,6 +2,10 @@ import React from "react";
 import AccordionTitle from "./AccordionTitle/AccordionTitle";
 import AccordionBody from "./AccordionBody/AccordionBody";
 
+type PropsType = {
+    title: string
+}
+
 function Accordion(props: any) {
     console.log('Accordion rendering');
     return (
