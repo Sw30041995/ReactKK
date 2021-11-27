@@ -4,16 +4,18 @@ import './App.css';
 function App() {
     return (
         <div>
-            <Title/>
+            <AppTitle/>
+            <Rating/>
+            <Accordion/>
             <Rating/>
             <Accordion/>
         </div>
     );
 }
 
-function Title() {
+function AppTitle() {
     return (
-        <div>This is App component</div>
+        <>This is App component</>
     );
 }
 
@@ -38,13 +40,25 @@ function Star() {
 function Accordion() {
     return (
         <div>
-            <h2>Menu</h2>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
+            <AccordionTitle/>
+            <AccordionBody/>
         </div>
+    );
+}
+
+function AccordionTitle() {
+    return (
+        <h2>Menu</h2>
+    );
+}
+
+function AccordionBody() {
+    return (
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
     );
 }
 
