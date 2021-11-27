@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
+    console.log('App rendering');
     return (
         <div>
             <AppTitle/>
@@ -14,12 +15,14 @@ function App() {
 }
 
 function AppTitle() {
+    console.log('AppTitle rendering');
     return (
         <>This is App component</>
     );
 }
 
 function Rating() {
+    console.log('Rating rendering');
     return (
         <div>
             <Star/>
@@ -32,12 +35,14 @@ function Rating() {
 }
 
 function Star() {
+    console.log('Star rendering');
     return (
         <div>star</div>
     );
 }
 
 function Accordion() {
+    console.log('Accordion rendering');
     return (
         <div>
             <AccordionTitle/>
@@ -47,12 +52,14 @@ function Accordion() {
 }
 
 function AccordionTitle() {
+    console.log('AccordionTitle rendering');
     return (
         <h2>Menu</h2>
     );
 }
 
 function AccordionBody() {
+    console.log('AccordionBody rendering');
     return (
         <ul>
             <li>1</li>
