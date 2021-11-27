@@ -6,7 +6,7 @@ type PropsType = {
     title: string
 }
 
-function Accordion(props: any) {
+function Accordion(props: PropsType) {
     console.log('Accordion rendering');
     return (
         <div>
