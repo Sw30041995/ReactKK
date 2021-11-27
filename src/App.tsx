@@ -4,10 +4,16 @@ import './App.css';
 function App() {
     return (
         <div>
-          This is App component
-          <Rating />
-          <Accordion />
+            <Title/>
+            <Rating/>
+            <Accordion/>
         </div>
+    );
+}
+
+function Title() {
+    return (
+        <div>This is App component</div>
     );
 }
 
@@ -32,7 +38,7 @@ function Star() {
 function Accordion() {
     return (
         <div>
-            <h1>Menu</h1>
+            <h2>Menu</h2>
             <ul>
                 <li>1</li>
                 <li>2</li>
