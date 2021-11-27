@@ -3,17 +3,27 @@ import AccordionTitle from "./AccordionTitle/AccordionTitle";
 import AccordionBody from "./AccordionBody/AccordionBody";
 
 type PropsType = {
-    title: string
+    title: string,
+    collapsed: boolean
 }
 
 function Accordion(props: PropsType) {
     console.log('Accordion rendering');
-    return (
-        <div>
-            <AccordionTitle title={props.title}/>
-            <AccordionBody/>
-        </div>
-    );
+    if (props.collapsed === false) {
+        return (
+            <div>
+                <AccordionTitle title={props.title}/>
+                <AccordionBody/>
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                <AccordionTitle title={props.title}/>
+            </div>
+        );
+    }
+
 }
 
 export default Accordion;
