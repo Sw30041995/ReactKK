@@ -1,10 +1,11 @@
 import React from "react";
 
-function AppTitle() {
-    console.log('AppTitle rendering');
-    return (
-        <div>This is App component</div>
-    );
+type PropsType = {
+    title: string
 }
 
-export default AppTitle;
+export function AppTitle(props: PropsType) {
+    return (
+        <h1>{props.title}</h1>
+    )
+}
