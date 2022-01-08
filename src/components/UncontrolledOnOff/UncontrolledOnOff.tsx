@@ -1,16 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-type PropsType = {
-    on: boolean
-    setOn: (on: boolean) => void
-}
+export function UncontrolledOnOff() {
 
-export function OnOff(props: PropsType) {
+    const [on, setOn] = useState<boolean>(false)
 
     const onStyle = {
         height: '25px',
         width: '30px',
-        backgroundColor: props.on ? 'green' : 'white',
+        backgroundColor: on ? 'green' : 'white',
         display: 'inline-block',
         border: '2px solid black',
         verticalAlign: 'middle',
@@ -20,7 +17,7 @@ export function OnOff(props: PropsType) {
     const offStyle = {
         height: '25px',
         width: '30px',
-        backgroundColor: !props.on ? 'red' : 'white',
+        backgroundColor: !on ? 'red' : 'white',
         display: 'inline-block',
         border: '2px solid black',
         marginLeft: '2px',
@@ -31,7 +28,7 @@ export function OnOff(props: PropsType) {
     const circle = {
         height: '15px',
         width: '15px',
-        backgroundColor: props.on ? 'green' : 'red',
+        backgroundColor: on ? 'green' : 'red',
         display: 'inline-block',
         border: '2px solid black',
         borderRadius: '7.5px',
@@ -39,8 +36,8 @@ export function OnOff(props: PropsType) {
         marginLeft: '2px',
     }
 
-    const turnOn = () => props.setOn(true)
-    const turnOff = () => props.setOn(false)
+    const turnOn = () => setOn(true)
+    const turnOff = () => setOn(false)
 
     return (
         <div>

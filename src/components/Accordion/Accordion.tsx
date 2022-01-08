@@ -1,15 +1,18 @@
 import React from "react";
+import {UserType} from "../../App";
 
 type AccordionPropsType = {
     title: string
     collapsed: boolean
+    setCollapsed: (collapsed: boolean) => void
+    users: Array<UserType>
 }
 
 export function Accordion(props: AccordionPropsType) {
     return (
         <div>
-            <AccordionTitle title={props.title} collapsed={props.collapsed}/>
-            {!props.collapsed && <AccordionBody/>}
+            <AccordionTitle title={props.title} collapsed={props.collapsed} setCollapsed={props.setCollapsed}/>
+            {!props.collapsed && <AccordionBody users={props.users}/>}
         </div>
     )
 }
@@ -17,20 +20,26 @@ export function Accordion(props: AccordionPropsType) {
 type AccordionTitlePropsType = {
     title: string
     collapsed: boolean
+    setCollapsed: (collapsed: boolean) => void
 }
 
 function AccordionTitle(props: AccordionTitlePropsType) {
+
+    const collapseMenu = () => props.setCollapsed(!props.collapsed)
+
     return (
-        <h3>{props.title}</h3>
+        <h3 onClick={collapseMenu}>{props.title}</h3>
     )
 }
 
-function AccordionBody() {
+type AccordionBodyPropsType = {
+    users: Array<UserType>
+}
+
+function AccordionBody(props: AccordionBodyPropsType) {
     return (
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            {props.users.map(u => <li key={u.id}>{u.name}</li>)}
         </ul>
     )
 }
