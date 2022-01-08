@@ -39,7 +39,7 @@ type AccordionBodyPropsType = {
 function AccordionBody(props: AccordionBodyPropsType) {
     return (
         <ul>
-            {props.users.map(u => <li key={u.id}>{u.name}</li>)}
+            {props.users.map(u => <li onClick={() => console.log(u.id)} key={u.id}>{u.name}</li>)}
         </ul>
     )
 }

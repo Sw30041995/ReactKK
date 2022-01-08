@@ -7,6 +7,8 @@ import {OnOff} from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
+import {Input} from './components/Input/Input';
+import {Select} from "./components/Select/Select";
 
 export type UserType = {
     id: number
@@ -30,6 +32,7 @@ function App() {
 
     return (
         <div>
+            <Select users={users}/>
             <AppTitle title={'This is App component'}/>
             <h2>Controlled components</h2>
             <Accordion title={'Menu'} setCollapsed={setCollapsed} collapsed={collapsed} users={users}/>
@@ -39,6 +42,7 @@ function App() {
             <UncontrolledAccordion title={'Menu'} users={users}/>
             <UncontrolledOnOff/>
             <UncontrolledRating/>
+            <Input/>
         </div>
     )
 }

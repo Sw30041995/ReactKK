@@ -1,12 +1,4 @@
-.errorRed {
-    color: red;
-}
-
-.inputRed {
-    background: #db8686;
-    border: 3px solid red;
-}
-
-.done {
-    opacity: 0.5;
+body {
+    width: 500px;
+    margin: 0 auto;
 }
