@@ -2,8 +2,9 @@
     width: 100px;
     height: 25px;
     border: 2px solid black;
-    background-color: #228c80;
+    background-color: #2dc2b0;
     padding: 2px;
+    cursor: default;
 }
 
 .items {
@@ -14,8 +15,13 @@
     width: 100px;
     height: 25px;
     border: 2px solid black;
-    background-color: #228c80;
+    background-color: #2dc2b0;
     padding: 2px;
+}
+
+.item:hover {
+    background-color: #0f7d7d;
+    cursor: default;
 }
 
 .arrow {

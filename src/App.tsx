@@ -29,10 +29,11 @@ function App() {
     const [collapsed, setCollapsed] = useState<boolean>(false)
     const [on, setOn] = useState<boolean>(false)
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    const [name, setName] = useState<string>('None')
 
     return (
         <div>
-            <Select users={users}/>
+            <Select users={users} name={name} setName={setName}/>
             <AppTitle title={'This is App component'}/>
             <h2>Controlled components</h2>
             <Accordion title={'Menu'} setCollapsed={setCollapsed} collapsed={collapsed} users={users}/>
